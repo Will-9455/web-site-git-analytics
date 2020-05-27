@@ -1,7 +1,7 @@
 function save_all_API(URL){
-    save_contributors_API(URL, "stats/contributors?access_token=1e4c54a97e4913272325ed71e84e916041795b4e", "contributors");
-    save_repos_API(URL, "issues?state=closed&access_token=1e4c54a97e4913272325ed71e84e916041795b4e", "issues");
-    save_repos_API(URL, "stats/participation?access_token=1e4c54a97e4913272325ed71e84e916041795b4e", "weeklyCommits");
+    save_contributors_API(URL, "stats/contributors?access_token=2c771cdc208e9b0e21b7499fa739c81e104ee22f", "contributors");
+    save_repos_API(URL, "issues?state=closed&access_token=2c771cdc208e9b0e21b7499fa739c81e104ee22f", "issues");
+    save_repos_API(URL, "stats/participation?access_token=2c771cdc208e9b0e21b7499fa739c81e104ee22f", "weeklyCommits");
     save_issues_API(URL, "issues", 1, true)
     console.log(1234);
 }
@@ -122,7 +122,7 @@ function getContributorNames_API(contributors,count){
     for(let i =0; i<count; i++){
         let member_request = new XMLHttpRequest();
         let name;
-        member_request.open('GET', "https://api.github.com/users/" + contributors[i] + '?access_token=1e4c54a97e4913272325ed71e84e916041795b4e', false);
+        member_request.open('GET', "https://api.github.com/users/" + contributors[i] + '?access_token=2c771cdc208e9b0e21b7499fa739c81e104ee22f', false);
         member_request.onload = function(){
             let data = JSON.parse(this.response);
             if (data["name"] != null){
